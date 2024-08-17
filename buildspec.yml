@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - npm install
+  build:
+    commands:
+      - tsc
+      - zip -r function.zip ./dist ./node_modules
+
+artifacts:
+  files:
+    - function.zip
